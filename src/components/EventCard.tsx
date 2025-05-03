@@ -1,0 +1,60 @@
+import React from "react";
+import { Project } from "../types/project";
+import { Event } from "../types/event";
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+interface EventCardProps {
+    event: Event;
+}
+
+const EventCard: React.FC<EventCardProps> = ({ event }) => {
+  return (
+    <div className="rounded-2xl border-2 border-solid border-black shadow-lg p-4 hover:shadow-xl transition">
+      <h2 className="text-xl text-black font-semibold mb-2">{event.title}</h2>
+      <p className="test-sm text-black mb-2">{event.description}</p>
+    </div>
+  );
+};
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  return (
+    <div className="rounded-2xl border-2 border-solid border-black shadow-lg p-4 hover:shadow-xl transition">
+      <h2 className="text-xl text-black font-semibold mb-2">{project.title}</h2>
+      <p className="text-sm text-black mb-2">{project.description}</p>
+      <div className="flex flex-wrap gap-2 mb-2">
+        {project.techStack.map((tech, idx) => (
+          <span key={idx} className="text-xs text-black bg-gray-100 px-2 py-1 rounded">
+            {tech}
+          </span>
+        ))}
+      </div>
+      <div className="flex gap-4">
+        {project.sourceCodeLink && (
+          <a
+            href={project.sourceCodeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 text-sm hover:underline"
+          >
+            View Source Code
+          </a>
+        )}
+        {project.deploymentLink && (
+          <a
+            href={project.deploymentLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 text-sm hover:underline"
+          >
+            View Live Demo
+          </a>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default EventCard;
