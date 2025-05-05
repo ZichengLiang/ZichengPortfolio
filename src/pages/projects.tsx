@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import EventCard from "@/components/EventCard";
 import { projects } from "@/data/projects";
@@ -7,7 +6,6 @@ import { events } from "@/data/events";
 export default function Projects() {
     return (
         <>
-            <Navbar />
             <main className="min-h-screen bg-gray-50 px-6 py-12">
                 <div className="max-w-6xl mx-auto">
                     <h1 className="text-3xl font-bold mb-8 text-gray-800">
