@@ -2,6 +2,7 @@ import ProjectCard from "@/components/ProjectCard";
 import EventCard from "@/components/EventCard";
 import { projects } from "@/data/projects";
 import { events } from "@/data/events";
+import Link from 'next/link'
 
 export default function Projects() {
     return (
@@ -17,7 +18,7 @@ export default function Projects() {
                     ))}
                     </div>
                     <br/>
-                    <a href="\" className="text-m text-blue-500"> View Full Project Archive</a>
+                    <Link href="\" className="text-m text-blue-500"> View Full Project Archive</Link>
                     <br/><br/>
                 </div>
                 <div className="max-w-6xl mx-auto">

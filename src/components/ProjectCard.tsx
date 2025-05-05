@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 import { Project } from "../types/project";
 
 interface ProjectCardProps {
@@ -19,24 +20,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
       <div className="flex gap-4">
         {project.sourceCodeLink && (
-          <a
+          <Link
             href={project.sourceCodeLink}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 text-sm hover:underline"
           >
             View Source Code
-          </a>
+          </Link>
         )}
         {project.deploymentLink && (
-          <a
+          <Link
             href={project.deploymentLink}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 text-sm hover:underline"
           >
             View Live Demo
-          </a>
+          </Link>
         )}
       </div>
     </div>
