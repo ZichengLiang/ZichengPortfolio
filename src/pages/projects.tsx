@@ -7,9 +7,9 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <>
-      <main className="min-h-screen bg-gray-50 px-6 py-12">
+      <main className="min-h-screen px-6 py-12">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-gray-800">
+          <h1 className="text-3xl font-bold mb-8">
             Selected Projects
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -21,15 +21,11 @@ export default function Projects() {
             )}
           </div>
           <br />
-          <Link href="\" className="text-m text-blue-500">
-            {" "}
-            View Full Project Archive
-          </Link>
           <br />
           <br />
         </div>
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl font-bold mb-8 text-gray-800">
+          <h1 className="text-2xl font-bold mb-8">
             Activities & Events
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -39,6 +35,10 @@ export default function Projects() {
             )}
           </div>
           <br />
+        </div>
+        <div className="max-w-6xl mx-auto pt-20">
+          <span>🏠</span>
+          <Link className="mb-8 hover:text-amber-400 hover:underline transition" href="/">HomePage</Link>
         </div>
       </main>
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import RoadSign from "./RoadSign";
 import Link from "next/link";
+import { shortBio } from "@/data/bios";
 
 // 为啥我的铺不满下边的屏幕呢？是不是因为内容不够？
 export default function SideBar() {
@@ -11,21 +12,24 @@ export default function SideBar() {
           <Link href="/">Zicheng Liang</Link>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-          Computer Science Student
+          TCD Computer Science Undergraduate
         </h2>
-        <p className="mt-4 max-w-xs leading-normal">Don Dingwen是唐鼎文</p>
+        <p className="mt-4 max-w-xs leading-normal">{shortBio}</p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
             {RoadSign("About")}
             {RoadSign("Activities")}
-            {RoadSign("Projects")}
+            {RoadSign("Selected Projects")}
           </ul>
+          <div>
+            <Link href="/projects" className="hover:text-amber-400 transition"><br/>Project Archive</Link>
+          </div>
         </nav>
       </div>
       <ul className="ml-1 mt-8 flex items-center" aria-label="Social Media">
         <li className="mr-5 shrink-0 text-xs">
           <Link
-            className="block hover:test-slate-200"
+            className="block hover:text-slate-200/90"
             href="https://github.com/ZichengLiang"
             target="blank"
             rel="noreferrer noopener"
@@ -46,7 +50,7 @@ export default function SideBar() {
         </li>
         <li className="mr-5 shrink-0 text-xs">
           <Link
-            className="block hover:test-slate-200"
+            className="block hover:text-blue-500"
             href="https://www.linkedin.com/in/zicheng-liang-b6809a251/"
             target="blank"
             rel="noreferrer noopener"
@@ -66,8 +70,9 @@ export default function SideBar() {
           </Link>
         </li>
       </ul>
-      <br />
-      <Link href="/cv">Grab my CV</Link>
+      <div className="pt-6">
+        <Link href="/cv" className="cursor-grab hover:text-blue-400 transition"><span>Grab my CV 😺</span></Link>
+      </div>
     </header>
   );
 }
