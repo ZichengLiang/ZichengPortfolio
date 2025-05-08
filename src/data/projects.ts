@@ -25,12 +25,18 @@ export const projects: Project[] = [
   {
     title: "AURA",
     description: "A web app for work efficiency evaluation",
-    techStack: ["Next.js", "Prisma", "AzurePostgreSQL", "AzureOpenAI", "AzureFaceAPI"],
+    techStack: [
+      "Next.js",
+      "Prisma",
+      "AzurePostgreSQL",
+      "AzureOpenAI",
+      "AzureFaceAPI",
+    ],
     startTime: new Date(Date.UTC(2025, 3, 15)),
     endTime: new Date(Date.UTC(2025, 4, 18)),
     deploymentLink: "https://aura-one-navy.vercel.app/",
     sourceCodeLink: "https://github.com/eurobin39/AURA",
-    tags: ["Microsoft Azure Hackathon", "Next.js", "Prisma", "PostgreSQL", ],
+    tags: ["Microsoft Azure Hackathon", "Next.js", "Prisma", "PostgreSQL"],
     selected: false,
   },
   {
@@ -41,5 +47,5 @@ export const projects: Project[] = [
     endTime: new Date(Date.UTC(2025, 2, 27)),
     sourceCodeLink: "https://github.com/favourhaya/group39",
     selected: false,
-  }
+  },
 ];

@@ -2,7 +2,7 @@ import React from "react";
 import { Event } from "../types/event";
 
 interface EventCardProps {
-    event: Event;
+  event: Event;
 }
 
 const EventCard: React.FC<EventCardProps> = ({ event }) => {

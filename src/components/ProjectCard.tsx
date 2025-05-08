@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link"
+import Link from "next/link";
 import { Project } from "../types/project";
 
 interface ProjectCardProps {
@@ -13,7 +13,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <p className="text-sm text-black mb-2">{project.description}</p>
       <div className="flex flex-wrap gap-2 mb-2">
         {project.techStack.map((tech, idx) => (
-          <span key={idx} className="text-xs text-black bg-gray-100 px-2 py-1 rounded">
+          <span
+            key={idx}
+            className="text-xs text-black bg-gray-100 px-2 py-1 rounded"
+          >
             {tech}
           </span>
         ))}
