@@ -14,11 +14,11 @@ export default function SideBar() {
         </h2>
         <p className="mt-4 max-w-xs leading-normal">I like building things that feel calm, even when the problem wasn’t.</p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
-          <ul className="mt-16 w-max">
+          <div className="mt-16 w-max">
             {RoadSign("About")}
-            {RoadSign("Activities")}
             {RoadSign("Selected Projects")}
-          </ul>
+            {RoadSign("Activities")}
+          </div>
           <div>
             <Link href="/projects" className="hover:text-amber-400 transition"><br/>Project Archive</Link>
           </div>
