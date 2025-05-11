@@ -21,11 +21,11 @@ export default function Main() {
         </p>
       </section>
       <br/>
-      <section id="activities">
-        <p>Activities...</p>
-      </section>
       <section id="projects">
         <p>Selected projects...</p>
+      </section>
+      <section id="activities">
+        <p>Activities...</p>
       </section>
     </main>
   );
