@@ -1,6 +1,14 @@
 import React from "react";
+import ProjectCard from "./ProjectCard";
+import EventCard from "./EventCard";
+import { projects } from "@/data/projects";
+import { events } from "@/data/events";
+import Link from "next/link";
 
 export default function Main() {
+  const selectedProjects = projects.filter(project => project.selected);
+  const selectedEvents = events.filter(event => event.selected);
+
   return (
     <main id="content" className="pt-24 lg:w-[52%] lg:py-24">
       <section id="about">
@@ -20,12 +28,35 @@ export default function Main() {
          My hope is that, as you explore this site, you will get a sense of how I work—with care, adaptability, and a steady sense of ownership over the things I build. 
         </p>
       </section>
+      
       <br/>
+      
       <section id="projects">
-        <p>Selected projects...</p>
+        <h3 className="text-xl font-bold mb-4 text-slate-200">Selected Projects</h3>
+        <div className="space-y-4">
+          {selectedProjects.map(project => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+        <div className="mt-4">
+          <Link 
+            href="/projects" 
+            className="text-blue-400 hover:text-blue-300 transition text-sm"
+          >
+            View all projects →
+          </Link>
+        </div>
       </section>
+      
+      <br/>
+      
       <section id="activities">
-        <p>Activities...</p>
+        <h3 className="text-xl font-bold mb-4 text-slate-200">Activities</h3>
+        <div className="space-y-4">
+          {selectedEvents.map(event => (
+            <EventCard key={event.title} event={event} />
+          ))}
+        </div>
       </section>
     </main>
   );

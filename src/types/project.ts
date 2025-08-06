@@ -1,8 +1,20 @@
 export interface Project {
   // Project title
   title: string;
-  // Project description
+  // URL slug for routing
+  slug: string;
+  // Short project description
   description: string;
+  // Detailed project description
+  detailedDescription?: string;
+  // The problem this project solves
+  problem?: string;
+  // The solution approach
+  solution?: string;
+  // Challenges faced and learnings
+  challenges?: string;
+  // Next steps or future improvements
+  nextSteps?: string;
   // Project tech stack
   techStack: string[];
   // Project deployment link
