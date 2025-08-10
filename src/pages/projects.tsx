@@ -10,19 +10,16 @@ export default function Projects() {
       <main className="min-h-screen px-6 py-12">
         {/* Header with navigation */}
         <div className="max-w-6xl mx-auto mb-8">
-          <div className="flex items-center justify-between mb-8">
-            <h1 className="text-3xl font-bold">
-              Project Archive
-            </h1>
+          <div className="grid grid-cols-3 items-center gap-8 mb-8">
             <Link 
               href="/"
-              className="flex items-center gap-2 px-4 py-2 text-sm bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg transition-colors duration-200"
+              className="text-blue-400 hover:text-blue-300 transition duration-200"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Back to Home
+              ← Back to Homepage
             </Link>
+            <h1 className="text-3xl font-bold text-center">
+              Project Archive
+            </h1>
           </div>
         </div>
 

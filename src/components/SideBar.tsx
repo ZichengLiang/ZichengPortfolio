@@ -1,4 +1,3 @@
-import React from "react";
 import RoadSign from "./RoadSign";
 import Link from "next/link";
 
@@ -9,10 +8,10 @@ export default function SideBar() {
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
           <Link href="/">Zicheng Liang</Link>
         </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-          TCD Computer Science Undergraduate
-        </h2>
-        <p className="mt-4 max-w-xs leading-normal">I like building things that feel calm, even when the problem wasn’t.</p>
+        <h3 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+          Computer Science Undergraduate (Year 3) <br/> Trinity College Dublin
+        </h3>
+        <p className="mt-4 max-w-xs leading-normal"></p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <div className="mt-16 w-max">
             {RoadSign("About")}

@@ -1,3 +1,10 @@
+export interface ProjectArticle {
+  id: string;
+  title: string;
+  description?: string;
+  slug: string;
+}
+
 export interface Project {
   // Project title
   title: string;
@@ -31,4 +38,8 @@ export interface Project {
   tags?: string[];
   // Selected flag
   selected: boolean;
+  // MDX content path (relative to content directory)
+  contentPath?: string;
+  // Related articles/reports
+  articles?: ProjectArticle[];
 }
