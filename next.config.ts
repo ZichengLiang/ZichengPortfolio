@@ -1,14 +1,17 @@
 import type { NextConfig } from "next";
-import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  cacheComponents: true,
+  partialPrefetching: true,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
 };
 
-const withMDX = createMDX({
-  // Add markdown plugins here, as desired
-});
-
-export default withMDX(nextConfig);
+export default nextConfig;
